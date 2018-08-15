@@ -1,3 +1,27 @@
+# README
+*Last updated August 15, 2018*
+
+## How to Run
+Clone this repo into a directory of your choice, and make sure you have the following installed:
+
+### Dependencies
+- `pip install cython`
+- `pip install pillow`
+- `pip install lxml`
+- `pip install matplotlib`
+- `pip install imutils`
+- `conda install opencv`
+- `pip install --ignore-installed --upgrade tensorflow`
+
+### Creating a Power BI Streaming Dataset
+Create a Power BI streaming dataset following [this tutorial](https://docs.microsoft.com/en-us/power-bi/service-real-time-streaming). When creating your dataset, add the following values.
+![alt text](images/PowerBIsetup.png "Power BI Streaming Dataset Values")
+
+### Running the Code
+Then edit line 139 of `natick_OD.py` to use your Power BI Push URL. Finally, navigate to where you cloned the repo and run `python natick_OD.py`
+
+## Note
+This repo uses code from the [TensorFlow Object Detection repository](https://github.com/tensorflow/models/tree/master/research/object_detection). We have edited the file `utils\visualization_utils.py` so that it displays the fish count in the bottom left corner of the video.
 
 # Contributing
 
