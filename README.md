@@ -10,7 +10,7 @@ Clone this repo into a directory of your choice, and make sure you have the foll
 - `pip install lxml`
 - `pip install matplotlib`
 - `pip install imutils`
-- `conda install opencv`
+- `pip install opencv-python`
 - `pip install --ignore-installed --upgrade tensorflow`
 
 ### Creating a Power BI Streaming Dataset
