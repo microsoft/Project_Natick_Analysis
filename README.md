@@ -15,7 +15,7 @@ Clone this repo into a directory of your choice, and make sure you have the foll
 
 ### Creating a Power BI Streaming Dataset
 Create a Power BI streaming dataset following [this tutorial](https://docs.microsoft.com/en-us/power-bi/service-real-time-streaming). When creating your dataset, add the following values.
-![alt text](images/PowerBIsetup.png "Power BI Streaming Dataset Values")
+![Power BI Streaming Dataset Values](images/PowerBIsetup.PNG)
 
 ### Running the Code
 Then edit line 139 of `natick_OD.py` to use your Power BI Push URL. Finally, navigate to where you cloned the repo and run `python natick_OD.py`
