@@ -1,4 +1,4 @@
-# README
+# **Monitoring marine animals surrounding an underwater datacenter using Microsoft AI**
 *Last updated August 21, 2018*
 
 # **Introduction**
@@ -8,7 +8,7 @@ At Microsoft, we put our cloud and artificial intelligence (AI) tools in the han
 
 Because Project Natick operates like a standard land datacenter, the computers inside can be used for machine learning to provide AI to other applications, just as in any other Microsoft datacenter. We are also using AI to monitor the surrounding aquatic environment, as a first step to understanding what impact, if any, the datacenter may have.
 
-# **Monitoring marine life using object detection**
+## **Monitoring marine life using object detection**
 
 The Project Natick datacenter is equipped with various sensors to monitor server conditions and the environment, including two underwater cameras, which are available as live video streams (check out the livestream on the [Project Natick homepage](https://natick.research.microsoft.com/#section-live)). These cameras allow us to monitor the surrounding environment from two fixed locations outside the datacenter in real time.
 
@@ -45,11 +45,6 @@ Then edit line 139 of `natick_OD.py` to use your Power BI Push URL. Finally, nav
 This repo uses code from the [TensorFlow Object Detection repository](https://github.com/tensorflow/models/tree/master/research/object_detection). We have edited the file `utils\visualization_utils.py` so that it displays the fish count in the bottom left corner of the video.
 
 
-# **Summary**
-Monitoring the environmental impact is an important topic, and AI can help make this process more scalable, and automated. In this post, we explained how we developed a deep learning solution for environment monitoring near the underwater data center. In this solution, we show how to ingest and store the data, and train an underwater animal detector to detect the marine life seen by the cameras. The model is then deployed to the machines in the data center to monitor the marine life. At the same time, we also explored how to analyze the video streams and leverage Power BI&#39;s streaming APIs to monitor the marine life over time.
-
-If you have questions or comments, please leave a message here.
-
 # Additional Information
 Continue reading for additional information that is not necessary for running the code on your own machine.
 
@@ -85,9 +80,12 @@ response = urllib2.urlopen(req)
 
 Because the animals may move quickly, we need to carefully balance between capturing data for many frames in short succession, sending to the Power BI dashboard, and consuming compute resources. We chose to push the analyzed data (for example, fish count) to Power BI three times per second to achieve this balance.
 
+# **Summary**
+Monitoring the environmental impact is an important topic, and AI can help make this process more scalable, and automated. In this post, we explained how we developed a deep learning solution for environment monitoring near the underwater data center. In this solution, we show how to ingest and store the data, and train an underwater animal detector to detect the marine life seen by the cameras. The model is then deployed to the machines in the data center to monitor the marine life. At the same time, we also explored how to analyze the video streams and leverage Power BI&#39;s streaming APIs to monitor the marine life over time.
+
+If you have questions or comments, please leave a message here.
 
 # Contributing
-
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
