@@ -44,6 +44,8 @@ Then edit line 139 of `natick_OD.py` to use your Power BI Push URL. Finally, nav
 ## Note
 This repo uses code from the [TensorFlow Object Detection repository](https://github.com/tensorflow/models/tree/master/research/object_detection). We have edited the file `utils\visualization_utils.py` so that it displays the fish count in the bottom left corner of the video.
 
+## Getting data
+If you want to train from scratch, the annotated data is located under the [Release Tab](https://github.com/Microsoft/Project_Natick_Analysis/releases)
 
 # Additional Information
 Continue reading for additional information that is not necessary for running the code on your own machine.
