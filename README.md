@@ -1,5 +1,5 @@
-# **Monitoring marine animals surrounding an underwater datacenter using Microsoft AI**
-*Last updated August 21, 2018*
+# **Monitoring environmental conditions near underwater datacenters using Deep Learning**
+*Last updated August 29, 2018*
 
 # **Introduction**
 At Microsoft, we put our cloud and artificial intelligence (AI) tools in the hands of those working to solve global environmental challenges, through programs such as [AI for Earth](https://www.microsoft.com/en-us/aiforearth/). We also use these same tools to understand our own interaction with the environment, such as the work being done in concert with [Project Natick](https://natick.research.microsoft.com/).

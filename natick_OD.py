@@ -16,7 +16,6 @@ import cv2
 import tkinter as tk
 import requests
 import threading
-import pytictoc
 import time
 
 from collections import defaultdict
@@ -36,8 +35,6 @@ if tf.__version__ < '1.4.0':
 
 # Model to download and/or import
 MODEL_NAME = 'ssd_mobilenet_v2_fish'
-MODEL_FILE = MODEL_NAME + '.tar.gz'
-DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -45,19 +42,6 @@ PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box
 PATH_TO_LABELS = os.path.join('data', 'pascal_label_map.pbtxt')
 NUM_CLASSES = 2
-
-# Download and Unzip Model if not already present
-if os.path.isdir(MODEL_NAME) is not True:
-  # Download tar.gz file
-  if os.path.isfile(MODEL_FILE) is not True:
-    opener = urllib.request.URLopener()
-    opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
-  # Unzip 
-  tar_file = tarfile.open(MODEL_FILE)
-  for file in tar_file.getmembers():
-    file_name = os.path.basename(file.name)
-    if 'frozen_inference_graph.pb' in file_name:
-      tar_file.extract(file, os.getcwd())
 
 # Load a (frozen) Tensorflow model into memory
 detection_graph = tf.Graph()
